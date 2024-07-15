@@ -44,7 +44,7 @@ Single-step Time Series Forecasting을 수식으로 나타내면 아래와 같�
 수식에서 $$\hat{y}_{i,t+1}$$는 이어지는 다음 스텝의 $i$-번째 타겟에 대한 예측을 의미하며, $$y_{i,t-k:t}$$와 $$\boldsymbol{x}_{i,t-k:t}$$는 예측에 활용되는 이전 $$k$$ 스텝의 관측치와 특징들을 의미한다. $$\boldsymbol{s}_{i}$$는 각 개체와 관련된 정적인 메타데이터이다.
 
 ### (a) Basic Building Blocks
-![encoder architectures](/assets/img/post/review_1/DL_architecture.png){: width="90%", height="90%"}
+![encoder architectures](../assets/img/post/review_1/DL_architecture.png){: width="90%", height="90%"}
 
 저자들은 시계열 분석을 입력 특징들을 latent variable $$\boldsymbol{z}_t$$로 인코딩하고, $$\boldsymbol{z}_t$$를 활용하여 최종 예측을 진행하는 관점으로 고려하였으며, 위 수식을 아래와 같이 다시 나타냈다.
 
@@ -63,13 +63,13 @@ $$
 
 CNN을 시계열 데이터 분석에 이용하기 위해 연구자들은 Causal Convolution의 다층 구조를 이용했다. Causal Convolution이란 모델이 현재 시점까지의 데이터만을 처리하여 예측을 수행하는 것으로 아래 그림을 보면 쉽게 이해할 수 있다.
 
-![causal convolution](/assets/img/post/review_1/Causal.png){: width="50%", height="50%"}
+![causal convolution](../assets/img/post/review_1/Causal.png){: width="50%", height="50%"}
 
 해당 그림은 참고문헌 [2]에 제시된 것으로 현재 시점의 예측인 $$y_{8}$$의 예측을 위해 $$x_{1}$$에서 $$x_{8}$$ 까지의 데이터는 이용하였지만 $$x_{9}$$ 부터의 데이터는 처리하지 않은 것을 보여준다. 이렇듯 예측 시점 이전까지의 데이터만을 이용하여 모델이 예측하는 Convolution 연산을 Causal Convolution이라고 한다. 
 
 Causal Convolution은 시계열 분석에 Convolution layer을 사용가능하도록 하였지만 예측을 위해 고려할 과거 시점이 길어질수록 모델의 레이어 수를 급격히 증가시켜야 한다는 단점을 가지고 있다. 이러한 문제를 해결하기 위해 Causal Dilated Convolution이 제시되었다.
 
-![causal dilated convolution](/assets/img/post/review_1/Causal_Dilated.png){: width="50%", height="50%"}
+![causal dilated convolution](../assets/img/post/review_1/Causal_Dilated.png){: width="50%", height="50%"}
 
 기존 Causal Convolution 기법에 Dilated Convolution 기법을 적용시켜서 Convolution layer를 깊게 쌓지 않고도 먼 과거 시점의 데이터들을 반영할 수 있게 되었다.
 
@@ -170,7 +170,7 @@ $$
 
 수식에서 $$\tau\in\{1,\dots,\tau_{\text{max}}\}$$는 예측 시간 스텝을 의미하며, $$\boldsymbol{u}_{t}$$는 전체 시간을 가로지르는 미래 입력, 그리고 $$\boldsymbol{x}_{t}$$는 이전에 관측된 모델 입력값을 의미한다. Multi-horizon Forecasting은 두 가지 접근법이 있는데 하나는 Iterative methods이며 하나는 Direct methods이다.
 
-![multi-horizon](/assets/img/post/review_1/Multi.png){: width="90%", height="90%"}
+![multi-horizon](../assets/img/post/review_1/Multi.png){: width="90%", height="90%"}
 
 #### (i) Iterative Methods
 

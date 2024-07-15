@@ -61,7 +61,7 @@ shutil.copy2(original_file, Copied_file)
 
 <br>
 
-![img_file](/assets/img/post/shutilcopy/post.png){: .align-center}*좌: shutil.copy, 우: shutil.copy2*
+![img_file](../assets/img/post/shutilcopy/post.png){: .align-center}*좌: shutil.copy, 우: shutil.copy2*
 
 ## shutil을 이용한 폴더 복사 (Folder copy)
 
@@ -81,7 +81,7 @@ shutil.copytree("Original Path", "Copied Path")
 
 <br>
 
-![img_folder](/assets/img/post/shutilcopy/folder.png){: .align-center}*copytree 오류*
+![img_folder](../assets/img/post/shutilcopy/folder.png){: .align-center}*copytree 오류*
 
 <br>
 
