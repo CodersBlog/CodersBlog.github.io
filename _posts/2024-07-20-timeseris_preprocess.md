@@ -79,16 +79,13 @@ df['cos_dayofyear'] = np.cos(2 * np.pi * df['자른 일년 기준 날짜'] / YEA
 
 ## 결과
 
-![img_file](/assets/img/post/timeseris_preprocess/result_1.png)
-{: .align-center}*datetime 형태의 시간 데이터*
+![img_file](/assets/img/post/timeseris_preprocess/result_1.png){: .align-center}*datetime 형태의 시간 데이터*
 
 <br>
 
-![img_file](/assets/img/post/timeseris_preprocess/result_2.png)
-{: .align-center}*요소별 분할*
+![img_file](/assets/img/post/timeseris_preprocess/result_2.png){: .align-center}*요소별 분할*
 
 
 <br>
 
-![img_file](/assets/img/post/timeseris_preprocess/result_3.png)
-{: .align-center}*sine / cosine 함수 적용 결과*
+![img_file](/assets/img/post/timeseris_preprocess/result_3.png){: .align-center}*sine / cosine 함수 적용 결과*
