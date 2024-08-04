@@ -109,6 +109,7 @@ export hello_world="global hello world"
 bash ./study_4.sh
 ```
 - study_4.sh
+
 ```bash
 #! /usr/bin/bash
 
