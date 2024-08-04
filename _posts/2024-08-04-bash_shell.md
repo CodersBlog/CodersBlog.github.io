@@ -3,7 +3,7 @@ title: "[Bash] Bash 쉘 스크립트 문법 [1편]"
 excerpt: "Description of bash shell by sehoon-lee"
 
 categories:
-    - linux, bash
+    - bash
 tags:
     - [linux], [bash]
 
