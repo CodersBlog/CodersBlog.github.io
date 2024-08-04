@@ -5,7 +5,7 @@ excerpt: "Description of bash shell by sehoon-lee"
 categories:
     - bash
 tags:
-    - [linux], [bash]
+    - [linux, bash]
 
 toc: true
 toc_sticky: true
