@@ -39,3 +39,9 @@ data = pd.read_csv(PATH, encoding="cp949")
 ```python
 data = pd.read_csv(PATH, encoding="utf-8-sig")
 ```
+
+위와 같은 방법으로 해결이 되지 않는 경우 아래와 같이 오류를 무시하는 argument인 encoding_errors에 "ignore"를 줌으로써 해결할 수 있습니다.
+
+```python
+data = pd.read_csv(file, encoding_errors = "ignore")
+```
