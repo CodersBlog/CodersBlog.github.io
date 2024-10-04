@@ -16,9 +16,9 @@ last_modified_at: 2024-10-04
 math: true
 ---
 
-Pandas를 활용해서 csv 파일을 불러올 때 발생할 수 있는 에러에 대한 해결 방안입니다.
+Pandas를 활용해서 csv 파일을 불러올 때 발생할 수 있는 오류에 대한 해결 방안입니다.
 
-다음과 같이 pd.read_csv() 함수를 통해 csv 파일을 불러올 때 가끔 아래와 같은 에러가 발생합니다.
+다음과 같이 pd.read_csv() 함수를 통해 csv 파일을 불러올 때 가끔 아래와 같은 오류가 발생합니다.
 
 ```python
 data = pd.read_csv(PATH)
