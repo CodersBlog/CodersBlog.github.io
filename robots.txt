@@ -1,10 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9ab19633ce2af869f37682c0d995f7e7310038b6
 ---
 permalink: /robots.txt
 # The robots rules
 ---
 
+<<<<<<< HEAD
+>>>>>>> 9ab19633ce2af869f37682c0d995f7e7310038b6
+=======
+>>>>>>> 9ab19633ce2af869f37682c0d995f7e7310038b6
 User-agent: *
 
 Disallow: /norobots/
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+Sitemap: http://localhost:4000/sitemap.xml
+=======
 Sitemap: {{ '/sitemap.xml' | absolute_url }}
+>>>>>>> 9ab19633ce2af869f37682c0d995f7e7310038b6
+=======
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
+>>>>>>> 9ab19633ce2af869f37682c0d995f7e7310038b6
