@@ -1,6 +1,6 @@
 ---
 title: "[Python] logger를 사용하여 코드 기록 남기기"
-excerpt: "Description of linux command by sehoon-lee"
+excerpt: "Description of python logging by sehoon-lee"
 
 categories:
     - python
