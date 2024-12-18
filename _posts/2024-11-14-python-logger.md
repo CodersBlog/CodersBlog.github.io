@@ -3,9 +3,9 @@ title: "[Python] logger를 사용하여 코드 기록 남기기"
 excerpt: "Description of python logging by sehoon-lee"
 
 categories:
-    - python
+    - Python
 tags:
-    - [python]
+    - [Python]
 
 toc: true
 toc_sticky: true
