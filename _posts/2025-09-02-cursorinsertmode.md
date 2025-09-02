@@ -3,9 +3,9 @@ title: "[node.js] node.js 설치하기"
 excerpt: "Let's find out how to install node.js"
 
 categories:
-    - Node.js
+    - Python
 tags:
-    - [Node.js, install, backend]
+    - [CursorAI, Python, Vim mode]
 
 toc: true
 toc_sticky: true
