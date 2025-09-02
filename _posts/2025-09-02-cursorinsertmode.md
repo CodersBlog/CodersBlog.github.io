@@ -1,6 +1,6 @@
 ---
-title: "[node.js] node.js 설치하기"
-excerpt: "Let's find out how to install node.js"
+title: "[Python] Cursor AI 실행 시 Vim 모드로 진입하는 문제 해결하기"
+excerpt: "Let's solve the Cursor AI problem running in Vim mode"
 
 categories:
     - Python
