@@ -1,0 +1,276 @@
+# AI 블로그 포스트 토픽 큐
+#
+# blog-post 스킬이 읽어서 status: todo 인 항목을 위에서부터 꺼내 쓴다.
+# 이 디렉토리는 `.` 로 시작하므로 Jekyll 빌드에서 자동 제외된다 (사이트에 노출 안 됨).
+#
+# status: todo | writing | done
+# done 이 되면 published(YYYY-MM-DD) 와 post(파일명) 를 채운다.
+#
+# 카테고리 (5종, title 대괄호 접두사도 동일하게 사용)
+#   LLM       - 개념/원리 (토큰, 컨텍스트, 임베딩, RAG, 파인튜닝)
+#   Prompt    - 프롬프트 작성 기법
+#   AI Tools  - ChatGPT / Claude / Gemini / NotebookLM 등 제품 사용법·꿀팁
+#   AI Coding - Claude Code / Cursor / Copilot 등 코딩 도구
+#   AI API    - SDK·API 연동, 코드 예제
+
+topics:
+  # ── 입문 / 개념 ────────────────────────────────────────────────
+  - id: 1
+    category: LLM
+    title: "LLM의 토큰이란 무엇인가 — 글자 수와 다른 이유"
+    slug: llm-token-basics
+    tags: [LLM, token, tokenizer, NLP]
+    note: "토큰 = 모델이 텍스트를 자르는 단위. 한글이 영어보다 토큰을 많이 먹는 이유, 요금·컨텍스트가 토큰 기준인 이유, 토큰 수 세는 법."
+    status: todo
+
+  - id: 2
+    category: LLM
+    title: "컨텍스트 윈도우 — 대화가 길어지면 앞을 잊는 이유"
+    slug: context-window
+    tags: [LLM, context window, memory]
+    note: "컨텍스트 = 한 번에 볼 수 있는 토큰 총량. 초과 시 앞부분 손실, 긴 대화에서 품질 떨어지는 이유와 대처(요약·새 세션·핵심 재입력)."
+    status: todo
+
+  - id: 3
+    category: LLM
+    title: "환각(Hallucination)은 왜 생기고 어떻게 줄이는가"
+    slug: llm-hallucination
+    tags: [LLM, hallucination, RAG, reliability]
+    note: "다음 토큰 예측 구조상 '모른다'보다 '그럴듯한 답'이 나오는 원리. 출처 요구·근거 인용·RAG·검증 질문으로 줄이는 실전 팁."
+    status: todo
+
+  - id: 4
+    category: LLM
+    title: "Temperature와 Top-p — 답변이 매번 달라지는 이유"
+    slug: temperature-top-p
+    tags: [LLM, temperature, top-p, sampling]
+    note: "샘플링 파라미터 두 개의 차이와 실제 체감. 코드 생성은 낮게, 브레인스토밍은 높게 같은 용도별 권장값."
+    status: todo
+
+  - id: 5
+    category: LLM
+    title: "임베딩(Embedding)이란 — 의미를 숫자로 바꾸는 법"
+    slug: embedding-basics
+    tags: [LLM, embedding, vector, similarity]
+    note: "텍스트 → 벡터. 코사인 유사도로 '비슷한 문서 찾기'가 되는 원리. 검색·추천·RAG의 기반."
+    status: todo
+
+  - id: 6
+    category: LLM
+    title: "RAG 기초 — 내 문서를 LLM에 물어보게 만들기"
+    slug: rag-basics
+    tags: [LLM, RAG, vector db, retrieval]
+    note: "청킹 → 임베딩 → 벡터DB 저장 → 질문 시 검색해서 프롬프트에 붙이기. 파인튜닝과의 차이와 선택 기준."
+    status: todo
+
+  - id: 7
+    category: LLM
+    title: "파인튜닝 vs RAG vs 프롬프트 — 무엇을 언제 쓰나"
+    slug: finetune-vs-rag
+    tags: [LLM, fine-tuning, RAG, prompt]
+    note: "비용·데이터량·업데이트 주기 기준 의사결정 표. 대부분은 프롬프트→RAG 순으로 충분하다는 결론."
+    status: todo
+
+  # ── 프롬프트 ───────────────────────────────────────────────────
+  - id: 8
+    category: Prompt
+    title: "프롬프트 기본기 5가지 — 역할·맥락·형식·예시·제약"
+    slug: prompt-basics-5
+    tags: [Prompt, prompt engineering, ChatGPT]
+    note: "같은 질문을 나쁜 프롬프트/좋은 프롬프트로 비교. 출력 형식 명시가 체감 효과 가장 큼."
+    status: todo
+
+  - id: 9
+    category: Prompt
+    title: "Few-shot 프롬프팅 — 예시 2~3개로 출력 형식 고정하기"
+    slug: few-shot-prompting
+    tags: [Prompt, few-shot, in-context learning]
+    note: "예시를 주면 형식·톤이 잡히는 이유. 예시 개수와 순서가 결과에 미치는 영향."
+    status: todo
+
+  - id: 10
+    category: Prompt
+    title: "생각의 사슬(Chain-of-Thought) — 단계별로 풀게 시키기"
+    slug: chain-of-thought
+    tags: [Prompt, chain-of-thought, reasoning]
+    note: "복잡한 계산·추론에서 '단계별로 생각해봐'가 정확도를 올리는 이유와 한계."
+    status: todo
+
+  - id: 11
+    category: Prompt
+    title: "출력을 JSON으로 강제하는 실전 방법"
+    slug: json-output
+    tags: [Prompt, JSON, structured output, parsing]
+    note: "스키마 제시 + 예시 + '설명 금지' 지시. 그래도 깨질 때 대비한 파싱 방어 코드."
+    status: todo
+
+  - id: 12
+    category: Prompt
+    title: "시스템 프롬프트와 유저 프롬프트를 나눠 쓰는 이유"
+    slug: system-vs-user-prompt
+    tags: [Prompt, system prompt, role]
+    note: "역할·규칙은 시스템, 매번 바뀌는 입력은 유저. 나누면 프롬프트 캐싱·재사용에도 유리."
+    status: todo
+
+  - id: 13
+    category: Prompt
+    title: "긴 문서를 요약시킬 때 품질을 올리는 프롬프트 패턴"
+    slug: long-doc-summary
+    tags: [Prompt, summarization, long context]
+    note: "분할 요약 후 재요약(map-reduce), 요약 관점 지정, 원문 인용 요구로 환각 억제."
+    status: todo
+
+  # ── AI 도구 사용법 / 꿀팁 ──────────────────────────────────────
+  - id: 14
+    category: AI Tools
+    title: "ChatGPT 대화를 프로젝트 단위로 관리하기"
+    slug: chatgpt-projects
+    tags: [AI Tools, ChatGPT, workflow]
+    note: "주제별 분리, 커스텀 인스트럭션, 파일 첨부 활용. 한 대화에 다 몰아넣지 않는 이유(컨텍스트 오염)."
+    status: todo
+
+  - id: 15
+    category: AI Tools
+    title: "AI에게 이미지·스크린샷으로 질문하는 법"
+    slug: vision-prompting
+    tags: [AI Tools, vision, multimodal, screenshot]
+    note: "에러 스크린샷·차트·손그림 활용. 이미지 화질/크롭이 인식률에 미치는 영향."
+    status: todo
+
+  - id: 16
+    category: AI Tools
+    title: "AI 답변을 검증하는 3단계 습관"
+    slug: verify-ai-answer
+    tags: [AI Tools, verification, reliability]
+    note: "출처 요구 → 반대 근거 질문 → 실제 실행/검색으로 확인. 코드는 무조건 돌려보기."
+    status: todo
+
+  - id: 17
+    category: AI Tools
+    title: "회의록·자료 정리에 AI 쓰는 실전 워크플로우"
+    slug: ai-meeting-notes
+    tags: [AI Tools, productivity, summarization]
+    note: "녹취 → 화자 분리 → 액션아이템 추출 프롬프트. 민감정보 제거 단계 포함."
+    status: todo
+
+  - id: 18
+    category: AI Tools
+    title: "로컬에서 LLM 돌리기 — Ollama 시작하기"
+    slug: ollama-getting-started
+    tags: [AI Tools, Ollama, local LLM, GPU]
+    note: "설치 → 모델 pull → 실행 → API 호출. VRAM별 모델 크기 선택 기준, 오프라인·보안 이점."
+    status: todo
+
+  - id: 19
+    category: AI Tools
+    title: "AI 도구에 사내 데이터를 넣기 전 확인할 것"
+    slug: ai-data-safety
+    tags: [AI Tools, security, privacy, policy]
+    note: "학습 사용 여부 설정, 개인정보 마스킹, 온프레미스/API 옵션 비교. 실무 체크리스트."
+    status: todo
+
+  # ── AI 코딩 도구 ───────────────────────────────────────────────
+  - id: 20
+    category: AI Coding
+    title: "Cursor 기본 사용법 — Tab, Ctrl+K, Composer 구분해서 쓰기"
+    slug: cursor-basics
+    tags: [AI Coding, Cursor, IDE, productivity]
+    note: "인라인 수정 / 파일 생성 / 멀티파일 편집을 언제 무엇으로. @ 로 파일·심볼 참조하는 습관."
+    status: todo
+
+  - id: 21
+    category: AI Coding
+    title: "Claude Code 설치와 첫 실행"
+    slug: claude-code-start
+    tags: [AI Coding, Claude Code, CLI, terminal]
+    note: "설치 → 프로젝트에서 실행 → 권한 모드 개념 → 첫 작업 시켜보기. ※ claude-api 스킬 먼저 확인."
+    status: todo
+
+  - id: 22
+    category: AI Coding
+    title: "CLAUDE.md로 AI에게 프로젝트 규칙 알려주기"
+    slug: claude-md-guide
+    tags: [AI Coding, Claude Code, CLAUDE.md, convention]
+    note: "매번 같은 설명 반복하지 않기. 빌드 명령·코딩 규칙·금지사항을 파일로 고정. ※ claude-api 스킬 먼저 확인."
+    status: todo
+
+  - id: 23
+    category: AI Coding
+    title: "AI에게 코드 리뷰를 시키는 프롬프트"
+    slug: ai-code-review
+    tags: [AI Coding, code review, quality]
+    note: "'문제 없나요' 대신 관점 지정(경계값·예외·동시성·보안). diff 범위를 명확히 주는 게 핵심."
+    status: todo
+
+  - id: 24
+    category: AI Coding
+    title: "AI로 테스트 코드 먼저 짜기 — 실전 TDD 흐름"
+    slug: ai-tdd
+    tags: [AI Coding, test, pytest, TDD]
+    note: "명세 → 테스트 생성 → 구현 → 실패 로그 그대로 붙여넣기 루프."
+    status: todo
+
+  - id: 25
+    category: AI Coding
+    title: "에러 로그를 AI에게 붙여넣을 때 잘 고치게 하는 법"
+    slug: debug-with-ai
+    tags: [AI Coding, debugging, error, traceback]
+    note: "전체 traceback + 실행 명령 + 환경(버전) + 관련 코드. 요약해서 붙이면 오답률 급증."
+    status: todo
+
+  - id: 26
+    category: AI Coding
+    title: "Git 커밋 메시지를 AI로 정리하기"
+    slug: ai-commit-message
+    tags: [AI Coding, git, commit, convention]
+    note: "git diff 를 넘겨 Conventional Commits 형식으로. 훅으로 자동화하는 방법까지."
+    status: todo
+
+  # ── API 연동 ───────────────────────────────────────────────────
+  - id: 27
+    category: AI API
+    title: "Python으로 LLM API 첫 호출해보기"
+    slug: llm-api-first-call
+    tags: [AI API, Python, SDK, API key]
+    note: "키 발급 → 환경변수 저장 → 호출 → 응답 파싱. .env 는 커밋 금지. ※ claude-api 스킬 먼저 확인."
+    status: todo
+
+  - id: 28
+    category: AI API
+    title: "스트리밍 응답 처리하기 — 타이핑되듯 출력하기"
+    slug: streaming-response
+    tags: [AI API, streaming, Python, SSE]
+    note: "스트리밍 이벤트 루프 기본형과 중간 취소 처리. ※ claude-api 스킬 먼저 확인."
+    status: todo
+
+  - id: 29
+    category: AI API
+    title: "프롬프트 캐싱으로 API 비용 줄이기"
+    slug: prompt-caching
+    tags: [AI API, caching, cost]
+    note: "반복되는 긴 시스템 프롬프트·문서를 캐시. 캐시 히트 조건과 TTL. ※ claude-api 스킬 먼저 확인."
+    status: todo
+
+  - id: 30
+    category: AI API
+    title: "Tool use(함수 호출) 기초 — LLM이 내 함수를 부르게 하기"
+    slug: tool-use-basics
+    tags: [AI API, tool use, function calling, agent]
+    note: "도구 스키마 정의 → 모델이 호출 요청 → 실행 → 결과 반환 루프. ※ claude-api 스킬 먼저 확인."
+    status: todo
+
+  - id: 31
+    category: AI API
+    title: "API 요청 실패·레이트리밋 대응 코드"
+    slug: api-retry-ratelimit
+    tags: [AI API, retry, rate limit, error handling]
+    note: "지수 백오프 재시도, 429/529 구분, 타임아웃 설정. 운영 투입 전 필수. ※ claude-api 스킬 먼저 확인."
+    status: todo
+
+  - id: 32
+    category: AI API
+    title: "토큰 수를 미리 세서 비용 예측하기"
+    slug: count-tokens
+    tags: [AI API, token, cost, budget]
+    note: "요청 전 토큰 카운트 → 예상 비용 계산. 긴 입력 자동 분할 기준. ※ claude-api 스킬 먼저 확인."
+    status: todo

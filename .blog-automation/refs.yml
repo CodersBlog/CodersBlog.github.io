@@ -1,0 +1,132 @@
+# 참고 소스 창고 (꿀팁 창고의 원재료)
+#
+# blog-post 스킬이 글을 쓸 때 여기서 출처를 골라 본문 하단 `## 참고` 에 링크한다.
+# Jekyll 빌드 제외 디렉토리이므로 사이트에 노출되지 않는다.
+#
+# tier
+#   1 - 1차 출처. 공식 문서 / 원논문 / 공식 repo. 인용 최우선.
+#   2 - 신뢰 가능한 2차 출처. 유지보수되는 큐레이션 repo, 실명 엔지니어 블로그.
+#   3 - 참고만. 검증 없이 인용 금지.
+#
+# verified: 이 정보를 직접 확인한 날짜 (스타 수는 이 시점 기준)
+# ⚠️ SEO 양산형 블로그(제품명+가이드 도메인)는 등록하지 않는다. 대부분 서로를 베낀 요약글이다.
+
+repos:
+  - name: dair-ai/Prompt-Engineering-Guide
+    url: https://github.com/dair-ai/Prompt-Engineering-Guide
+    web: https://www.promptingguide.ai/
+    tier: 1
+    stars: 77329
+    verified: 2026-08-07
+    topics: [Prompt, LLM]
+    note: "프롬프트 엔지니어링 사실상 표준 레퍼런스. 기법별로 원논문이 달려 있어 1차 출처 추적에 좋다. 최근엔 context engineering·RAG·agent 까지 확장."
+
+  - name: anthropics/prompt-eng-interactive-tutorial
+    url: https://github.com/anthropics/prompt-eng-interactive-tutorial
+    tier: 1
+    stars: 37569
+    verified: 2026-08-07
+    topics: [Prompt, AI API]
+    note: "Anthropic 공식 프롬프트 튜토리얼. 챕터별 실습 노트북. 프롬프트 기본기 글의 근거로 쓰기 좋음."
+
+  - name: anthropics/claude-cookbooks
+    url: https://github.com/anthropics/claude-cookbooks
+    tier: 1
+    stars: 51092
+    verified: 2026-08-07
+    topics: [AI API, AI Coding]
+    note: "공식 예제 노트북 모음. tool use / RAG / 비전 등 실행 가능한 코드가 있어 '검증된 코드' 확보처로 1순위."
+
+  - name: microsoft/generative-ai-for-beginners
+    url: https://github.com/microsoft/generative-ai-for-beginners
+    tier: 1
+    stars: 116903
+    verified: 2026-08-07
+    topics: [LLM, Prompt, AI API]
+    note: "MS 공식 입문 21강. 개념 설명 수준·순서가 우리 '입문 시리즈'와 잘 맞는다. 구조 참고용."
+
+  - name: x1xhlol/system-prompts-and-models-of-ai-tools
+    url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
+    tier: 2
+    stars: 142641
+    verified: 2026-08-07
+    topics: [Prompt, AI Coding]
+    note: "Cursor·Claude Code·Devin 등 실제 AI 도구의 시스템 프롬프트 수집. '잘 만든 프롬프트는 이렇게 생겼다' 실물 예시. ⚠️ 유출물 성격이라 인용 시 원문 복붙 금지, 구조·패턴만 참고."
+
+  - name: humanlayer/12-factor-agents
+    url: https://github.com/humanlayer/12-factor-agents
+    tier: 2
+    stars: 25116
+    verified: 2026-08-07
+    topics: [AI API, AI Coding]
+    note: "LLM 앱을 실서비스 품질로 만드는 12원칙. 에이전트 설계 글의 뼈대로 쓸 만함. ⚠️ 마지막 푸시 2025-09 로 업데이트 정체."
+
+  - name: VoltAgent/awesome-ai-agent-papers
+    url: https://github.com/VoltAgent/awesome-ai-agent-papers
+    tier: 2
+    stars: 1661
+    verified: 2026-08-07
+    topics: [LLM, AI API]
+    note: "2026년 에이전트 논문 큐레이션. 논문 소식 스윕의 시작점으로 유용."
+
+  - name: promptslab/Awesome-Prompt-Engineering
+    url: https://github.com/promptslab/Awesome-Prompt-Engineering
+    tier: 2
+    stars: 6232
+    verified: 2026-08-07
+    topics: [Prompt]
+    note: "프롬프트 자료 큐레이션. 활발히 갱신 중(2026-08-07 푸시)."
+
+  - name: ollama/ollama
+    url: https://github.com/ollama/ollama
+    tier: 1
+    stars: 177991
+    verified: 2026-08-07
+    topics: [AI Tools, LLM]
+    note: "로컬 LLM 실행 표준 도구. topics.yml #18 글의 1차 출처."
+
+  - name: openclaw/openclaw
+    url: https://github.com/openclaw/openclaw
+    tier: 1
+    stars: 385447
+    verified: 2026-08-07
+    topics: [AI Tools, AI API]
+    note: "2026년 최대 화제 오픈소스 AI 에이전트. 메신저를 UI로 쓰는 개인 비서형. 스타 수가 비정상적으로 빠르게 늘어 별도 글감 가치 있음."
+
+papers:
+  - title: "TokenPilot: Cache-Efficient Context Management for LLM Agents"
+    url: https://arxiv.org/abs/2606.17016
+    date: 2026-06-15
+    tier: 1
+    verified: 2026-08-07
+    topics: [LLM, AI API]
+    note: "긴 에이전트 세션의 컨텍스트 누적 문제를 프리픽스 안정화(캐시 유지) + 수명 기반 제거로 해결. 모드에 따라 비용 56~87% 절감 주장. 프롬프트 캐싱 글(#29)의 근거."
+
+  - title: "The Missing Memory Hierarchy: Demand Paging for LLM Context Windows"
+    url: https://arxiv.org/abs/2603.09023
+    date: 2026-03-09
+    tier: 1
+    verified: 2026-08-07
+    topics: [LLM]
+    note: "컨텍스트 윈도우를 OS 의 페이징처럼 다루는 제안(Pichay). 컨텍스트를 L1 캐시에 비유 — 컨텍스트 윈도우 글(#2)의 비유 소재로 훌륭함."
+
+blogs:
+  - name: Sebastian Raschka — LLM Research Papers 2026
+    url: https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1
+    tier: 2
+    verified: 2026-08-07
+    topics: [LLM]
+    note: "실명 연구자의 논문 정리. 논문 스윕 시 1차로 훑을 소스."
+
+  - name: LangChain — context engineering (write/select/compress/isolate)
+    url: https://blog.langchain.com/
+    tier: 2
+    verified: 2026-08-07
+    topics: [LLM, Prompt]
+    note: "컨텍스트 엔지니어링 4전략 프레이밍의 출처. ⚠️ 정확한 원글 URL 을 인용 전에 다시 확인할 것 (블로그 루트만 검증됨)."
+
+# 인용 금지 목록 — 검색에 자주 뜨지만 서로 베낀 SEO 양산글
+blocked:
+  - "제품명 + guide/hosting 형태의 신규 도메인 (crewclaw, oneclaw 류)"
+  - "출처·저자 없이 숫자만 나열하는 'Top N' 요약 블로그"
+  - "AI 로 대량 생성된 티스토리/미디엄 번역 요약글"
