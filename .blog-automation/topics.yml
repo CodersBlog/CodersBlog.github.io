@@ -121,6 +121,19 @@ topics:
     status: todo
 
   # ── AI 도구 사용법 / 꿀팁 ──────────────────────────────────────
+  - id: 33
+    category: AI Tools
+    title: "OpenClaw — 메신저로 부리는 오픈소스 AI 비서"
+    slug: openclaw-intro
+    tags: [AI Tools, OpenClaw, AI agent, self-hosted]
+    note: |
+      2026년 가장 빠르게 큰 오픈소스 AI 에이전트(★385,447 / 2026-08-07 gh api 확인).
+      텔레그램·디스코드 같은 메신저를 UI 로 쓰고, 영속 메모리·멀티 모델·툴 호출을 지원.
+      다룰 것: 무엇인지 / 기존 챗봇과 뭐가 다른지 / 셀프호스팅 시 주의점(키 관리, 권한).
+      ⚠️ 검색하면 openclaw 관련 SEO 양산 도메인이 대량으로 뜬다. refs.yml blocked 참고,
+         반드시 공식 repo(github.com/openclaw/openclaw)와 공식 문서만 1차 출처로 쓸 것.
+    status: todo
+
   - id: 14
     category: AI Tools
     title: "ChatGPT 대화를 프로젝트 단위로 관리하기"
