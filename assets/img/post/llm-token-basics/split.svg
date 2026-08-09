@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="20" y="28" font-size="15" font-weight="600" fill="#808080">"unhappiness" 를 자르는 세 가지 방법</text>
+
+  <!-- ── 글자 단위 ── -->
+  <text x="20" y="66" font-size="14" font-weight="700" fill="#808080">글자 단위</text>
+  <g font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <g>
+      <rect x="20"  y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="38"  y="103">u</text>
+      <rect x="60"  y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="78"  y="103">n</text>
+      <rect x="100" y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="118" y="103">h</text>
+      <rect x="140" y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="158" y="103">a</text>
+      <rect x="180" y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="198" y="103">p</text>
+      <rect x="220" y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="238" y="103">p</text>
+      <rect x="260" y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="278" y="103">i</text>
+      <rect x="300" y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="318" y="103">n</text>
+      <rect x="340" y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="358" y="103">e</text>
+      <rect x="380" y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="398" y="103">s</text>
+      <rect x="420" y="78" width="36" height="38" rx="4" fill="#5B8DEF"/><text x="438" y="103">s</text>
+    </g>
+  </g>
+  <text x="476" y="95"  font-size="13" font-weight="600" fill="#808080">11조각</text>
+  <text x="476" y="113" font-size="13" fill="#808080">종류는 적지만 문장이 너무 길어집니다</text>
+
+  <!-- ── 단어 단위 ── -->
+  <text x="20" y="158" font-size="14" font-weight="700" fill="#808080">단어 단위</text>
+  <rect x="20" y="170" width="436" height="38" rx="4" fill="#F0A04B"/>
+  <text x="238" y="195" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">unhappiness</text>
+  <text x="476" y="187" font-size="13" font-weight="600" fill="#808080">1조각</text>
+  <text x="476" y="205" font-size="13" fill="#808080">처음 보는 단어를 아예 못 다룹니다</text>
+
+  <!-- ── 서브워드 ── -->
+  <text x="20" y="250" font-size="14" font-weight="700" fill="#3FB6A8">서브워드 — 실제로 쓰는 방식</text>
+  <g font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <rect x="20"  y="262" width="116" height="38" rx="4" fill="#3FB6A8"/><text x="78"  y="287">un</text>
+    <rect x="140" y="262" width="176" height="38" rx="4" fill="#3FB6A8"/><text x="228" y="287">happi</text>
+    <rect x="320" y="262" width="136" height="38" rx="4" fill="#3FB6A8"/><text x="388" y="287">ness</text>
+  </g>
+  <text x="476" y="279" font-size="13" font-weight="600" fill="#3FB6A8">3조각</text>
+  <text x="476" y="297" font-size="13" fill="#808080">짧으면서 새 단어도 조합해 표현합니다</text>
+
+  <!-- 하단 주석 -->
+  <text x="20" y="330" font-size="12" fill="#808080">※ 개념 설명용 예시입니다. 실제로 어떻게 쪼개지는지는 모델의 토크나이저마다 다릅니다.</text>
+</svg>

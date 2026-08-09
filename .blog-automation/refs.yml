@@ -93,7 +93,31 @@ repos:
     topics: [AI Tools, AI API]
     note: "2026년 최대 화제 오픈소스 AI 에이전트. 메신저를 UI로 쓰는 개인 비서형. 스타 수가 비정상적으로 빠르게 늘어 별도 글감 가치 있음."
 
+  - name: microsoft/LLMLingua
+    url: https://github.com/microsoft/LLMLingua
+    tier: 1
+    stars: 6533
+    verified: 2026-08-09
+    topics: [LLM, AI API, Prompt]
+    note: "프롬프트 압축 공식 구현체. EMNLP'23 + ACL'24 논문 뒷받침. 토큰 절약 글의 유일한 검증된 도구 출처."
+
 papers:
+  - title: "LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models"
+    url: https://arxiv.org/abs/2310.05736
+    date: 2023-10-09
+    tier: 1
+    verified: 2026-08-09
+    topics: [LLM, Prompt, AI API]
+    note: "Jiang 외, EMNLP 2023. 중요도 낮은 토큰을 걸러 최대 20배 압축, 성능 손실 적음. 프롬프트 압축의 1차 출처."
+
+  - title: "Neural Machine Translation of Rare Words with Subword Units"
+    url: https://arxiv.org/abs/1508.07909
+    date: 2015-08-31
+    tier: 1
+    verified: 2026-08-09
+    topics: [LLM]
+    note: "Sennrich·Haddow·Birch, ACL 2016. 서브워드 분할(BPE)의 원논문 — 토크나이저 설명의 정본."
+
   - title: "TokenPilot: Cache-Efficient Context Management for LLM Agents"
     url: https://arxiv.org/abs/2606.17016
     date: 2026-06-15
