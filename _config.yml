@@ -47,6 +47,7 @@ social:
 # Site Verification Settings
 webmaster_verifications:
   google: "OiQr8dGwAg6ZrC-u50t8MgBipbF3kgVKkMKEPmyXxw4" # fill in your Google verification code
+  naver: "c59f0c0c138748839205b7ea305a8c16ab39b35b" # 네이버 서치어드바이저 (jekyll-seo-tag 미지원 → head.html 에서 직접 출력)
   bing: # fill in your Bing verification code
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
