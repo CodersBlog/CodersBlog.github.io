@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+  <defs>
+    <clipPath id="barclip">
+      <rect x="40" y="70" width="720" height="72" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <!-- 상단 라벨 -->
+  <text x="40" y="42" font-size="15" font-weight="600" fill="#808080">컨텍스트 윈도우 = 한 번의 요청에서 볼 수 있는 전체</text>
+
+  <!-- 막대 -->
+  <g clip-path="url(#barclip)">
+    <rect x="40"  y="70" width="76"  height="72" fill="#5B8DEF"/>
+    <rect x="116" y="70" width="286" height="72" fill="#3FB6A8"/>
+    <rect x="402" y="70" width="160" height="72" fill="#F0A04B"/>
+    <rect x="562" y="70" width="104" height="72" fill="#A66BBE"/>
+    <rect x="666" y="70" width="94"  height="72" fill="#E05C5C"/>
+  </g>
+  <rect x="40" y="70" width="720" height="72" rx="8" fill="none" stroke="#808080" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- 구분선 -->
+  <g stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.55">
+    <line x1="116" y1="70" x2="116" y2="142"/>
+    <line x1="402" y1="70" x2="402" y2="142"/>
+    <line x1="562" y1="70" x2="562" y2="142"/>
+    <line x1="666" y1="70" x2="666" y2="142"/>
+  </g>
+
+  <!-- 세그먼트 라벨 (흰 글자, 어떤 테마에서도 읽힘) -->
+  <g fill="#ffffff" font-size="14" font-weight="600" text-anchor="middle">
+    <text x="78"  y="101">시스템</text>
+    <text x="78"  y="120">프롬프트</text>
+    <text x="259" y="111">대화 기록</text>
+    <text x="482" y="111">첨부 파일</text>
+    <text x="614" y="101">생각</text>
+    <text x="614" y="120">thinking</text>
+    <text x="713" y="111">답변</text>
+  </g>
+
+  <!-- 입력 / 출력 구분 브래킷 -->
+  <g stroke="#808080" stroke-width="1.5" fill="none">
+    <path d="M40 158 L40 168 L562 168 L562 158"/>
+    <path d="M562 158 L562 168 L760 168 L760 158"/>
+  </g>
+  <g fill="#808080" font-size="13" text-anchor="middle">
+    <text x="301" y="188">입력 — 매 요청마다 통째로 다시 전송</text>
+    <text x="661" y="188">출력</text>
+  </g>
+
+  <!-- 하단 강조 -->
+  <text x="400" y="224" font-size="14" font-weight="600" fill="#808080" text-anchor="middle">
+    입력과 출력이 하나의 예산을 나눠 씁니다
+  </text>
+</svg>

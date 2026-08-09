@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <!-- 한도선 -->
+  <line x1="640" y1="30" x2="640" y2="268" stroke="#E05C5C" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="646" y="26" font-size="13" font-weight="600" fill="#E05C5C">컨텍스트 한도</text>
+
+  <!-- 1턴 -->
+  <text x="12" y="66" font-size="13" font-weight="600" fill="#808080">1턴</text>
+  <rect x="60" y="48" width="60"  height="30" rx="4" fill="#5B8DEF"/>
+  <rect x="120" y="48" width="70" height="30" rx="4" fill="#3FB6A8"/>
+  <text x="90"  y="68" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">시스템</text>
+  <text x="155" y="68" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q1+A1</text>
+
+  <!-- 2턴 -->
+  <text x="12" y="120" font-size="13" font-weight="600" fill="#808080">2턴</text>
+  <rect x="60" y="102" width="60"  height="30" rx="4" fill="#5B8DEF"/>
+  <rect x="120" y="102" width="70" height="30" rx="4" fill="#3FB6A8" fill-opacity="0.55"/>
+  <rect x="190" y="102" width="80" height="30" rx="4" fill="#3FB6A8"/>
+  <text x="90"  y="122" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">시스템</text>
+  <text x="155" y="122" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q1+A1</text>
+  <text x="230" y="122" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q2+A2</text>
+
+  <!-- 3턴 -->
+  <text x="12" y="174" font-size="13" font-weight="600" fill="#808080">3턴</text>
+  <rect x="60"  y="156" width="60"  height="30" rx="4" fill="#5B8DEF"/>
+  <rect x="120" y="156" width="70"  height="30" rx="4" fill="#3FB6A8" fill-opacity="0.4"/>
+  <rect x="190" y="156" width="80"  height="30" rx="4" fill="#3FB6A8" fill-opacity="0.7"/>
+  <rect x="270" y="156" width="150" height="30" rx="4" fill="#F0A04B"/>
+  <rect x="420" y="156" width="90"  height="30" rx="4" fill="#3FB6A8"/>
+  <text x="90"  y="176" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">시스템</text>
+  <text x="155" y="176" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q1+A1</text>
+  <text x="230" y="176" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q2+A2</text>
+  <text x="345" y="176" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">첨부한 파일</text>
+  <text x="465" y="176" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q3+A3</text>
+
+  <!-- 4턴 (한도 초과) -->
+  <text x="12" y="228" font-size="13" font-weight="600" fill="#808080">4턴</text>
+  <rect x="60"  y="210" width="60"  height="30" rx="4" fill="#5B8DEF"/>
+  <rect x="120" y="210" width="70"  height="30" rx="4" fill="#3FB6A8" fill-opacity="0.3"/>
+  <rect x="190" y="210" width="80"  height="30" rx="4" fill="#3FB6A8" fill-opacity="0.45"/>
+  <rect x="270" y="210" width="150" height="30" rx="4" fill="#F0A04B" fill-opacity="0.7"/>
+  <rect x="420" y="210" width="90"  height="30" rx="4" fill="#3FB6A8" fill-opacity="0.7"/>
+  <rect x="510" y="210" width="130" height="30" rx="4" fill="#3FB6A8"/>
+  <rect x="640" y="210" width="120" height="30" rx="4" fill="#E05C5C" fill-opacity="0.85"/>
+  <text x="90"  y="230" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">시스템</text>
+  <text x="155" y="230" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q1+A1</text>
+  <text x="230" y="230" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q2+A2</text>
+  <text x="345" y="230" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">첨부한 파일</text>
+  <text x="465" y="230" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q3+A3</text>
+  <text x="575" y="230" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Q4+A4</text>
+  <text x="700" y="230" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">넘침</text>
+
+  <!-- 잘려나가는 방향 표시 -->
+  <path d="M120 258 L120 272 L270 272" stroke="#E05C5C" stroke-width="1.5" fill="none"/>
+  <path d="M266 268 L274 272 L266 276 Z" fill="#E05C5C"/>
+  <text x="282" y="277" font-size="13" fill="#E05C5C">한도를 넘으면 오래된 앞부분부터 잘려나갑니다</text>
+
+  <!-- 하단 설명 -->
+  <text x="60" y="312" font-size="14" font-weight="600" fill="#808080">
+    진한 색 = 이번 턴에 새로 추가된 부분 / 흐린 색 = 이미 보냈지만 또 보내는 부분
+  </text>
+</svg>
