@@ -1,0 +1,37 @@
+---
+layout: null
+sitemap: false
+---
+{%- comment -%}
+  네이버 서치어드바이저용 RSS 2.0 피드.
+
+  jekyll-feed 이 만드는 /feed.xml 은 Atom 1.0(<feed>/<entry>) 이라 네이버 RSS 제출에서
+  "양식이 올바르지 않습니다" 로 거부된다. 네이버는 RSS 2.0(<rss>/<channel>/<item>) 을 요구한다.
+  Atom 피드는 RSS 리더용으로 그대로 두고, 이 파일을 네이버에 제출한다.
+
+  description 은 각 글 프론트매터의 한국어 description 을 쓴다 (없으면 excerpt).
+{%- endcomment -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ '/' | absolute_url }}</link>
+    <description>{{ site.description | strip_newlines | strip | xml_escape }}</description>
+    <language>ko-KR</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll</generator>
+    <atom:link href="{{ '/rss.xml' | absolute_url }}" rel="self" type="application/rss+xml" />
+    {%- for post in site.posts %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ post.url | absolute_url }}</link>
+      <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+      <description>{{ post.description | default: post.excerpt | strip_html | strip_newlines | strip | xml_escape }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      {%- for category in post.categories %}
+      <category>{{ category | xml_escape }}</category>
+      {%- endfor %}
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>
