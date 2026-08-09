@@ -1,6 +1,7 @@
 ---
 title: "[Library] ipykernel 라이브러리"
-excerpt: "Description of ipykernel by Junhyuns"
+excerpt: "Description of ipykernel by Junhyuns"
+description: "파이썬 가상환경을 Jupyter Notebook의 커널로 등록해 사용할 수 있게 해주는 ipykernel의 설치와 사용법을 정리합니다."
 
 categories:
     - Python

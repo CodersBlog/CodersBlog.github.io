@@ -1,6 +1,7 @@
 ---
 title: "[Library] Pandas 라이브러리 datetime 함수를 이용한 시계열 데이터 전처리"
-excerpt: "Description of file and folder copy function using shutil by Junhyuns"
+excerpt: "Description of file and folder copy function using shutil by Junhyuns"
+description: "Pandas의 datetime 함수로 시계열 데이터를 전처리하는 방법. 시간 요소 분할과 sine/cosine 변환을 예제로 설명합니다."
 
 categories:
     - Python

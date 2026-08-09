@@ -1,6 +1,7 @@
 ---
 title: "CLIP-Adapter : Better Vision-Language Models with Feature Adapters"
-excerpt: "CLIP-Adapter paper review by sehoon-lee"
+excerpt: "CLIP-Adapter paper review by sehoon-lee"
+description: "소량의 데이터셋으로 CLIP을 학습시키는 CLIP-Adapter 논문 리뷰. Feature Adapter 구조와 학습 방식을 정리합니다."
 
 categories:
     - VLM

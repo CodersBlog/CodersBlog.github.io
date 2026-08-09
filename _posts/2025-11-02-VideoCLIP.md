@@ -1,6 +1,7 @@
 ---
 title: "VideoCLIP"
-excerpt: "VideoCLIP by sehoon-lee"
+excerpt: "VideoCLIP by sehoon-lee"
+description: "CLIP의 대조학습을 비디오로 확장한 VideoCLIP 논문 리뷰. 이미지-텍스트 정렬 방식이 영상 데이터에 적용되는 과정을 정리합니다."
 
 categories:
     - VLM

@@ -1,6 +1,7 @@
 ---
 title: "[Linux] 리눅스에서 자주 사용하는 명령어 [1편]"
-excerpt: "Description of linux command by sehoon-lee"
+excerpt: "Description of linux command by sehoon-lee"
+description: "리눅스에서 프로그램 개발과 서버 운영 시 자주 사용하는 명령어를 예제와 함께 정리한 1편입니다."
 
 categories:
     - linux

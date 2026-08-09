@@ -1,6 +1,7 @@
 ---
 title: "[Cuda] Cuda 경로가 설정 되지 않아도 pytorch나 tensorflow가 gpu에서 작동할까?"
-excerpt: "Will PyTorch or TensorFlow work on the GPU even if the CUDA path is not set? by sehoon-lee"
+excerpt: "Will PyTorch or TensorFlow work on the GPU even if the CUDA path is not set? by sehoon-lee"
+description: "CUDA 경로를 따로 설정하지 않아도 PyTorch와 TensorFlow가 GPU에서 동작하는 이유를 직접 빌드한 경험을 바탕으로 정리합니다."
 
 categories:
     - cuda

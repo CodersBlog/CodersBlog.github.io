@@ -1,6 +1,7 @@
 ---
 title: "[Python] Cursor AI 실행 시 Vim 모드로 진입하는 문제 해결하기"
-excerpt: "Let's solve the Cursor AI problem running in Vim mode"
+excerpt: "Let's solve the Cursor AI problem running in Vim mode"
+description: "Cursor AI를 실행할 때마다 Vim insert 모드로 진입하는 문제를 설정 변경으로 해결하는 방법입니다."
 
 categories:
     - Python

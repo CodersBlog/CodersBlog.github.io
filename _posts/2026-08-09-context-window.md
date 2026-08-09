@@ -1,6 +1,7 @@
 ---
 title: "[LLM] 컨텍스트 윈도우 — 대화가 길어지면 앞을 잊는 이유"
 excerpt: "Understanding the LLM context window by Junhyuns"
+description: "LLM이 긴 대화에서 앞부분을 잊는 이유를 컨텍스트 윈도우 구조로 설명하고, 비용과 답변 품질을 지키는 실전 대처법을 정리합니다."
 
 categories:
     - LLM

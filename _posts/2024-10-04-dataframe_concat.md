@@ -1,6 +1,7 @@
 ---
 title: "[Library] 여러 개의 csv 파일을 불러와서 하나의 데이터프레임으로 만들기"
-excerpt: "How to create one dataframe from multiple csv files by Junhyuns"
+excerpt: "How to create one dataframe from multiple csv files by Junhyuns"
+description: "여러 개의 csv 파일을 한 번에 불러와 하나의 Pandas 데이터프레임으로 합치는 방법을 예제 코드로 설명합니다."
 
 categories:
     - Python

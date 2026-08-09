@@ -1,6 +1,7 @@
 ---
 title: "[Error] 파일 로드 시 발생하는 Decode 오류 해결 방법"
-excerpt: "Solution for decode error by Junhyuns"
+excerpt: "Solution for decode error by Junhyuns"
+description: "Pandas로 csv 파일을 읽을 때 발생하는 UnicodeDecodeError의 원인과 해결 방법. encoding, encoding_errors 인자 사용법을 정리합니다."
 
 categories:
     - Python
