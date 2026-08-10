@@ -4,7 +4,7 @@ excerpt: "Description of bash shell by sehoon-lee"
 description: "Bash 쉘 스크립트의 기본 문법 정리 1편. 변수, 조건문, 반복문 등 스크립트 작성에 필요한 요소를 예제로 설명합니다."
 
 categories:
-    - bash
+    - Infra
 tags:
     - [linux, bash]
 

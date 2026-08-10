@@ -1,10 +1,10 @@
 ---
-title: "[Paper Review] Time Series Forecasting With Deep Learning: A Survey"
+title: "[Time Series] Time Series Forecasting With Deep Learning: A Survey"
 excerpt: "Paper review by Junhyuns"
 description: "딥러닝 기반 시계열 예측 서베이 논문 리뷰. 인코더 구조, causal convolution, multi-horizon 예측 등 핵심 개념을 정리합니다."
 
 categories:
-    - Time Series Analysis
+    - Paper
 tags:
     - [Data Analysis, Time Series Forecasting]
 

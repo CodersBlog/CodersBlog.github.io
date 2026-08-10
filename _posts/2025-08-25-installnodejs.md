@@ -1,10 +1,10 @@
 ---
-title: "[node.js] node.js 설치하기"
+title: "[Node.js] node.js 설치하기"
 excerpt: "Let's find out how to install node.js"
 description: "브라우저 밖에서 자바스크립트를 실행할 수 있게 해주는 런타임 Node.js의 설치 방법을 단계별로 정리합니다."
 
 categories:
-    - Node.js
+    - Dev
 tags:
     - [Node.js, install, backend]
 

@@ -4,7 +4,7 @@ excerpt: "What an LLM token actually is by Junhyuns"
 description: "LLM의 토큰이 글자 수와 어떻게 다른지, 한글이 토큰을 더 많이 쓰는 이유와 토큰을 아끼는 여섯 가지 방법을 정리합니다."
 
 categories:
-    - LLM
+    - AI
 tags:
     - [LLM, token, tokenizer, NLP, cost]
 

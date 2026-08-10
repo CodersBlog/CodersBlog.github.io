@@ -1,10 +1,10 @@
 ---
-title: "[Library] shutil을 이용한 파일 복사와 폴더 복사"
+title: "[Python] shutil을 이용한 파일 복사와 폴더 복사"
 excerpt: "Description of file and folder copy function using shutil by Junhyuns"
 description: "파이썬 shutil 라이브러리로 파일과 폴더를 복사하는 방법. copy와 copy2의 차이, copytree 사용 시 발생하는 오류까지 다룹니다."
 
 categories:
-    - Python
+    - Dev
 tags:
     - [Python, shutil, file copy, folder copy]
 

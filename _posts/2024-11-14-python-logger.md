@@ -4,7 +4,7 @@ excerpt: "Description of python logging by sehoon-lee"
 description: "파이썬 logging 라이브러리로 코드 실행 기록을 남기는 방법. logger 설정과 활용법을 예제로 설명합니다."
 
 categories:
-    - Python
+    - Dev
 tags:
     - [Python]
 

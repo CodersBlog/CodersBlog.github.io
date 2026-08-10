@@ -1,10 +1,10 @@
 ---
-title: "Tip-Adapter: Training-free CLIP-Adapter for Better Vision-Language Modeling"
+title: "[VLM] Tip-Adapter: Training-free CLIP-Adapter for Better Vision-Language Modeling"
 excerpt: "Tip-Adapter paper review by sehoon-lee"
 description: "학습 없이 CLIP의 분류 성능을 높이는 Tip-Adapter 논문 리뷰. Zero-Shot 분류의 한계와 캐시 기반 접근 방식을 정리합니다."
 
 categories:
-    - VLM
+    - Paper
 tags:
     - [Tip-Adapter]
 

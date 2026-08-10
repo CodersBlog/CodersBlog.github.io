@@ -1,10 +1,10 @@
 ---
-title: "Video Summury vs Video Synopsis"
+title: "[Vision] Video Summury vs Video Synopsis"
 excerpt: "Video Summury vs Video Synopsis by sehoon-lee"
 description: "지능형 CCTV에서 관측 피로도를 줄이는 두 가지 접근인 Video Summary와 Video Synopsis가 어떻게 다른지 비교합니다."
 
 categories:
-    - Video Synopsis
+    - AI
 tags:
     - [Video Synopsis]
 
