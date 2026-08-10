@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <!-- 구분선 -->
+  <line x1="400" y1="20" x2="400" y2="340" stroke="#808080" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.5"/>
+
+  <!-- ══════════ 왼쪽: 일반적인 에이전트 ══════════ -->
+  <text x="30" y="34" font-size="15" font-weight="700" fill="#808080">일반적인 코딩 에이전트</text>
+  <text x="30" y="54" font-size="13" fill="#808080">능력마다 도구를 하나씩 정의</text>
+
+  <rect x="130" y="72" width="140" height="42" rx="6" fill="#5B8DEF"/>
+  <text x="200" y="99" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">모델</text>
+
+  <g stroke="#5B8DEF" stroke-width="1.5" fill="none" stroke-opacity="0.7">
+    <path d="M200 114 L200 130 L70 130 L70 148"/>
+    <path d="M200 114 L200 130 L135 130 L135 148"/>
+    <path d="M200 130 L200 148"/>
+    <path d="M200 114 L200 130 L265 130 L265 148"/>
+    <path d="M200 114 L200 130 L330 130 L330 148"/>
+  </g>
+
+  <g font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <rect x="30"  y="148" width="80" height="34" rx="5" fill="#3FB6A8"/><text x="70"  y="170">Read</text>
+    <rect x="95"  y="190" width="80" height="34" rx="5" fill="#3FB6A8"/><text x="135" y="212">Write</text>
+    <rect x="160" y="148" width="80" height="34" rx="5" fill="#3FB6A8"/><text x="200" y="170">Edit</text>
+    <rect x="225" y="190" width="80" height="34" rx="5" fill="#3FB6A8"/><text x="265" y="212">Bash</text>
+    <rect x="290" y="148" width="80" height="34" rx="5" fill="#3FB6A8"/><text x="330" y="170">Grep</text>
+  </g>
+  <text x="200" y="252" font-size="13" fill="#808080" text-anchor="middle">…능력이 늘면 도구도 늘어남</text>
+
+  <rect x="30" y="272" width="340" height="62" rx="6" fill="#5B8DEF" fill-opacity="0.12" stroke="#5B8DEF" stroke-opacity="0.4"/>
+  <text x="46" y="294" font-size="13" font-weight="600" fill="#808080">결과가 대화에 그대로 쌓임</text>
+  <text x="46" y="316" font-size="13" fill="#808080">→ 컨텍스트가 차면 압축하거나 잘라냄</text>
+
+  <!-- ══════════ 오른쪽: Prime Agent ══════════ -->
+  <text x="430" y="34" font-size="15" font-weight="700" fill="#F0A04B">Prime Agent (RLM)</text>
+  <text x="430" y="54" font-size="13" fill="#808080">내장 도구는 단 하나</text>
+
+  <rect x="530" y="72" width="140" height="42" rx="6" fill="#5B8DEF"/>
+  <text x="600" y="99" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">모델</text>
+
+  <path d="M600 114 L600 148" stroke="#F0A04B" stroke-width="2.5" fill="none"/>
+  <path d="M596 142 L600 152 L604 142 Z" fill="#F0A04B"/>
+
+  <rect x="430" y="152" width="340" height="112" rx="8" fill="#F0A04B" fill-opacity="0.15" stroke="#F0A04B" stroke-width="2"/>
+  <rect x="530" y="140" width="140" height="30" rx="5" fill="#F0A04B"/>
+  <text x="600" y="161" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">ipython</text>
+
+  <text x="600" y="192" font-size="12" fill="#808080" text-anchor="middle">영속 커널 — 변수가 턴을 넘어 살아있음</text>
+
+  <g font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <rect x="444" y="206" width="76" height="30" rx="4" fill="#A66BBE"/><text x="482" y="226">파일 조작</text>
+    <rect x="528" y="206" width="76" height="30" rx="4" fill="#A66BBE"/><text x="566" y="226">셸 실행</text>
+    <rect x="612" y="206" width="66" height="30" rx="4" fill="#A66BBE"/><text x="645" y="226">스킬</text>
+    <rect x="686" y="206" width="70" height="30" rx="4" fill="#A66BBE"/><text x="721" y="226">rlm()</text>
+  </g>
+  <text x="600" y="254" font-size="12" fill="#808080" text-anchor="middle">전부 파이썬 코드로 실행</text>
+
+  <rect x="430" y="272" width="340" height="62" rx="6" fill="#F0A04B" fill-opacity="0.12" stroke="#F0A04B" stroke-opacity="0.4"/>
+  <text x="446" y="294" font-size="13" font-weight="600" fill="#808080">결과는 변수에 담김</text>
+  <text x="446" y="316" font-size="13" fill="#808080">→ 압축을 거쳐도 커널 상태는 그대로 유지</text>
+</svg>
