@@ -1,0 +1,94 @@
+# 논문 후보 큐 (Paper 카테고리)
+#
+# papers.rb 로 수집한 후보와, 다른 작업 중 우연히 발견한 논문을 모아둔다.
+# Jekyll 빌드 제외 디렉토리라 사이트에 노출되지 않는다.
+#
+# verified: arXiv 원문에서 제목·저자·발표일을 직접 확인했는가
+#   → false 인 항목으로 글을 쓰지 않는다. `ruby .blog-automation/papers.rb verify "<제목>"` 먼저.
+#
+# status: candidate | queued | done
+#   candidate  후보. 아직 쓸지 안 쓸지 안 정함
+#   queued     쓰기로 정함. topics.yml 에도 항목을 만든다
+#   done       발행 완료
+
+papers:
+  # ── 발행 완료 ──────────────────────────────────────────────────
+  - title: "Continual Harness: Online Adaptation for Self-Improving Foundation Agents"
+    arxiv: "2605.09998"
+    published: 2026-05-11
+    authors: "Karten 외 8명"
+    venue: "arXiv (cs.LG, cs.AI) — 28쪽"
+    verified: true
+    verified_at: 2026-08-10
+    prefix: Agent
+    why: "하네스 엔지니어링 개념의 1차 출처. Prime Agent /refine 의 근거."
+    status: done
+    post: 2026-08-10-continual-harness.md
+
+  # ── 검증 완료, 아직 안 씀 ──────────────────────────────────────
+  - title: "TokenPilot: Cache-Efficient Context Management for LLM Agents"
+    arxiv: "2606.17016"
+    published: 2026-06-15
+    authors: "Xu 외 (Ningyu Zhang 그룹)"
+    venue: "arXiv"
+    verified: true
+    verified_at: 2026-08-07
+    prefix: Agent
+    why: "긴 에이전트 세션의 컨텍스트 누적을 캐시 유지 + 수명 기반 제거로 처리. 모드별 비용 56~87% 절감 주장. 컨텍스트/비용 글과 이어짐."
+    status: candidate
+
+  - title: "The Missing Memory Hierarchy: Demand Paging for LLM Context Windows"
+    arxiv: "2603.09023"
+    published: 2026-03-09
+    authors: "Tony Mason (단독)"
+    venue: "arXiv"
+    verified: true
+    verified_at: 2026-08-07
+    prefix: LLM
+    why: "컨텍스트 윈도우를 OS 페이징에 빗댄 관점. 컨텍스트 최대 93% 감축. 이미 컨텍스트 윈도우 글에서 참고로 인용함."
+    status: candidate
+
+  - title: "LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models"
+    arxiv: "2310.05736"
+    published: 2023-10-09
+    authors: "Jiang 외"
+    venue: "EMNLP 2023"
+    verified: true
+    verified_at: 2026-08-09
+    prefix: Prompt
+    why: "프롬프트 압축의 정본. 최대 20배 압축에 성능 손실 적음. 토큰 절약 글에서 이미 인용."
+    status: candidate
+
+  - title: "Neural Machine Translation of Rare Words with Subword Units"
+    arxiv: "1508.07909"
+    published: 2015-08-31
+    authors: "Sennrich, Haddow, Birch"
+    venue: "ACL 2016"
+    verified: true
+    verified_at: 2026-08-09
+    prefix: LLM
+    why: "서브워드 분할(BPE) 원논문. 고전이라 단독 리뷰보다는 토크나이저 글의 근거로 계속 쓰임."
+    status: candidate
+
+  # ── 미검증 후보 (papers.rb cvpr 2026 수집분) ───────────────────
+  # ⚠️ 아래는 학회 페이지 제목만 본 상태다. 쓰기 전에 반드시 verify 를 거칠 것.
+  - title: "Training One Model to Master Cross-Level Agentic Actions via Reinforcement Learning"
+    venue: "CVPR 2026 Highlight"
+    verified: false
+    prefix: Agent
+    why: "에이전트 행동을 RL 로 통합 학습. Continual Harness 의 co-learning 과 비교할 만함."
+    status: candidate
+
+  - title: "PersonaVLM: Long-Term Personalized Multimodal LLMs"
+    venue: "CVPR 2026 Highlight"
+    verified: false
+    prefix: VLM
+    why: "장기 개인화 + 멀티모달. 기존 VLM 리뷰 4편(BLIP/CLIP-Adapter/Tip-Adapter/VideoCLIP)의 후속으로 자연스러움."
+    status: candidate
+
+  - title: "Multi-Scale Gaussian-Language Map for Zero-shot Embodied Navigation and Reasoning"
+    venue: "CVPR 2026 Highlight"
+    verified: false
+    prefix: VLM
+    why: "embodied 네비게이션 + 언어. Continual Harness 의 embodied 문제의식과 접점."
+    status: candidate
