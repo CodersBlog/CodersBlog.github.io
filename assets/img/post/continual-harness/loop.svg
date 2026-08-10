@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <line x1="400" y1="20" x2="400" y2="360" stroke="#808080" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.5"/>
+
+  <!-- ══════ 왼쪽: 사람이 고치는 루프 ══════ -->
+  <text x="30" y="34" font-size="15" font-weight="700" fill="#808080">지금까지 — 사람이 하네스를 고친다</text>
+
+  <g font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <rect x="90" y="54"  width="230" height="40" rx="6" fill="#5B8DEF"/><text x="205" y="79">에이전트가 실행</text>
+    <rect x="90" y="126" width="230" height="40" rx="6" fill="#E05C5C"/><text x="205" y="151">사람이 관찰하고 원인 분석</text>
+    <rect x="90" y="198" width="230" height="40" rx="6" fill="#E05C5C"/><text x="205" y="223">사람이 하네스를 수정</text>
+    <rect x="90" y="270" width="230" height="40" rx="6" fill="#A66BBE"/><text x="205" y="295">처음부터 다시 실행</text>
+  </g>
+
+  <g stroke="#808080" stroke-width="1.8" fill="none">
+    <path d="M205 94 L205 120"/>
+    <path d="M205 166 L205 192"/>
+    <path d="M205 238 L205 264"/>
+  </g>
+  <g fill="#808080">
+    <path d="M201 114 L205 124 L209 114 Z"/>
+    <path d="M201 186 L205 196 L209 186 Z"/>
+    <path d="M201 258 L205 268 L209 258 Z"/>
+  </g>
+
+  <!-- 되돌아가는 화살표 -->
+  <path d="M90 290 L56 290 L56 74 L86 74" stroke="#A66BBE" stroke-width="1.8" fill="none"/>
+  <path d="M80 70 L90 74 L80 78 Z" fill="#A66BBE"/>
+
+  <rect x="30" y="326" width="340" height="36" rx="6" fill="#E05C5C" fill-opacity="0.12" stroke="#E05C5C" stroke-opacity="0.4"/>
+  <text x="46" y="349" font-size="13" font-weight="600" fill="#808080">사람이 병목이고, 매번 리셋해야 합니다</text>
+
+  <!-- ══════ 오른쪽: Continual Harness ══════ -->
+  <text x="430" y="34" font-size="15" font-weight="700" fill="#3FB6A8">Continual Harness — 에이전트가 고친다</text>
+
+  <g font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <rect x="490" y="70"  width="220" height="44" rx="6" fill="#5B8DEF"/><text x="600" y="97">행동한다</text>
+    <rect x="490" y="176" width="220" height="44" rx="6" fill="#3FB6A8"/><text x="600" y="203">스스로 하네스를 고친다</text>
+  </g>
+
+  <path d="M560 114 L560 172" stroke="#3FB6A8" stroke-width="2" fill="none"/>
+  <path d="M556 166 L560 176 L564 166 Z" fill="#3FB6A8"/>
+  <path d="M640 176 L640 118" stroke="#3FB6A8" stroke-width="2" fill="none"/>
+  <path d="M636 124 L640 114 L644 124 Z" fill="#3FB6A8"/>
+
+  <text x="600" y="148" font-size="12" fill="#808080" text-anchor="middle">한 번의 실행 안에서 계속</text>
+
+  <!-- 고치는 대상 4가지 -->
+  <g font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <rect x="432" y="238" width="80" height="30" rx="4" fill="#F0A04B"/><text x="472" y="258">프롬프트</text>
+    <rect x="520" y="238" width="88" height="30" rx="4" fill="#F0A04B"/><text x="564" y="258">서브에이전트</text>
+    <rect x="616" y="238" width="66" height="30" rx="4" fill="#F0A04B"/><text x="649" y="258">스킬</text>
+    <rect x="690" y="238" width="76" height="30" rx="4" fill="#F0A04B"/><text x="728" y="258">메모리</text>
+  </g>
+  <path d="M600 220 L600 234" stroke="#F0A04B" stroke-width="1.8" fill="none"/>
+  <path d="M596 228 L600 238 L604 228 Z" fill="#F0A04B"/>
+  <text x="600" y="290" font-size="12" fill="#808080" text-anchor="middle">고치는 대상은 이 넷</text>
+
+  <rect x="430" y="326" width="340" height="36" rx="6" fill="#3FB6A8" fill-opacity="0.12" stroke="#3FB6A8" stroke-opacity="0.4"/>
+  <text x="446" y="349" font-size="13" font-weight="600" fill="#808080">사람도, 리셋도 없습니다 (reset-free)</text>
+</svg>

@@ -332,3 +332,26 @@ topics:
     tags: [AI API, token, cost, budget]
     note: "요청 전 토큰 카운트 → 예상 비용 계산. 긴 입력 자동 분할 기준. ※ claude-api 스킬 먼저 확인."
     status: todo
+
+  # ── 큐를 거치지 않고 즉석에서 쓴 글 (기록용) ──────────────────
+  - id: 34
+    category: Review
+    prefix: "Agent"
+    title: "Prime Agent 뜯어보기 — 도구가 하나뿐인 코딩 에이전트"
+    slug: prime-agent
+    tags: [AI Coding, Prime Agent, RLM, harness, agent]
+    note: "PrimeIntellect-ai/prime-agent 리뷰. 개별 도구 대신 ipython 하나, 컨텍스트를 변수로, 서브에이전트는 핸들만 반환, 하네스 자기수정. 설계 철학 대조로 구성."
+    status: done
+    published: 2026-08-10
+    post: 2026-08-10-prime-agent.md
+
+  - id: 35
+    category: Paper
+    prefix: "Agent"
+    title: "Continual Harness — 에이전트가 자기 하네스를 고친다면"
+    slug: continual-harness
+    tags: [Agent, harness, self-improving, LLM, RL]
+    note: "arXiv 2605.09998 (Karten 외, 2026-05) 리뷰. Prime Agent /refine 의 근거 논문. reset-free 온라인 하네스 개선, 포켓몬 벤치마크, process-reward co-learning. #34 와 2부작."
+    status: done
+    published: 2026-08-10
+    post: 2026-08-10-continual-harness.md
