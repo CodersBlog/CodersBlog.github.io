@@ -20,6 +20,32 @@
 # 이 5개 외에 새 카테고리를 만들지 않는다. 새 주제는 prefix 를 새로 만든다.
 # 같은 prefix 가 여러 category 에 걸치는 건 의도된 것 — [Agent] 는 Review 와 Paper 양쪽에 붙어
 # 두 글이 한 주제라는 걸 드러낸다.
+#
+# ══════════════════════════════════════════════════════════════════════
+# ⚠️ 블로그가 둘이다 (2026-08-14 분리). 여기서 뽑기 전에 반드시 읽을 것.
+# ══════════════════════════════════════════════════════════════════════
+#
+# LLM·에이전트·프롬프트 주제는 junhyunp.github.io 로 넘어갔다.
+# 이 큐의 아래쪽 LLM/Prompt/Tool/IDE/Agent 항목들은 **그쪽 몫**이고,
+# 여기서 꺼내 쓰면 같은 글이 두 도메인에 올라간다 (중복 콘텐츠).
+#
+#   junhyunp.github.io  →  LLM · Agent · Prompt · 최신 논문 · 트렌드
+#   여기 (CodersBlog)   →  아래 표대로
+#
+# 그리고 이 블로그는 2인 블로그다. 영역이 갈린다.
+#
+#   작성자        영역                              대표 글
+#   ──────────────────────────────────────────────────────────────────
+#   sehoon-lee   비전·VLM, Infra(Linux/CUDA/       BLIP, CLIP-Adapter, Tip-Adapter,
+#                TensorRT/Server)                  VideoCLIP, DINOv3, TensorRT-LLM
+#   Junhyuns     Time Series, Python·Pandas 실무,  TS Survey, SegRNN, 시계열 전처리,
+#                SQL                               csv 병합, 각종 오류 해결, SQL
+#
+# → Junhyuns 가 이 큐에서 꺼내 쓸 것은 [Time Series] · [Python] · [SQL] 이다.
+#   비전·VLM·Infra 주제는 sehoon-lee 영역이므로 먼저 상의한다.
+#   이미 발행된 글 목록을 `ls _posts` 로 확인하고, 같은 날 같은 분야가 겹치지 않게 한다.
+#
+# status 에 `moved` 가 붙은 항목은 junhyunp.github.io 에서 이미 발행됐다. 쓰지 않는다.
 
 topics:
   # ── 입문 / 개념 ────────────────────────────────────────────────
@@ -52,7 +78,7 @@ topics:
     slug: llm-hallucination
     tags: [LLM, hallucination, RAG, reliability]
     note: "다음 토큰 예측 구조상 '모른다'보다 '그럴듯한 답'이 나오는 원리. 출처 요구·근거 인용·RAG·검증 질문으로 줄이는 실전 팁."
-    status: todo
+    status: moved      # junhyunp.github.io 에서 2026-08-12 발행됨. 여기서 쓰지 않는다
 
   - id: 4
     category: AI
@@ -79,7 +105,7 @@ topics:
     slug: rag-basics
     tags: [LLM, RAG, vector db, retrieval]
     note: "청킹 → 임베딩 → 벡터DB 저장 → 질문 시 검색해서 프롬프트에 붙이기. 파인튜닝과의 차이와 선택 기준."
-    status: todo
+    status: moved      # junhyunp.github.io 에서 2026-08-14 발행됨. 여기서 쓰지 않는다
 
   - id: 7
     category: AI
@@ -355,3 +381,60 @@ topics:
     status: done
     published: 2026-08-10
     post: 2026-08-10-continual-harness.md
+
+  # ══════════════════════════════════════════════════════════════════
+  # 여기부터가 이 블로그(CodersBlog) 의 몫이다 — 2026-08-14 분리 후 신설.
+  # Junhyuns 영역: Time Series · Python·Pandas 실무 · SQL
+  # 위쪽 LLM/Prompt 항목들은 junhyunp.github.io 로 넘어갔으니 꺼내지 않는다.
+  # ══════════════════════════════════════════════════════════════════
+
+  - id: 36
+    category: Paper
+    prefix: "Time Series"
+    title: "시계열에도 파운데이션 모델이 왔다 — 학습 없이 예측한다는 것"
+    slug: ts-foundation-models
+    tags: [Time Series, Foundation Model, Zero-shot, Forecasting, Chronos, TimesFM]
+    note: >-
+      2년 반 만의 시계열 복귀. #2 SegRNN 이 깔고 있던 "데이터셋마다 학습" 전제가
+      사전학습 모델로 바뀐 지점을 다룬다. Chronos 의 스케일링·양자화 토큰화,
+      Chronos-2(arXiv 2510.15821) 그룹 어텐션 ICL, TimesFM-ICF few-shot.
+      한계는 Sun & Sun(Machine Learning: Earth, 2026-03) 제3자 평가로 붙였다 —
+      일변량 제로샷은 학습한 LSTM 과 대등하나 다변량은 아직 못 미침.
+      TS_Survey·SegRNN·llm-token-basics 에 내부 링크.
+    status: done
+    published: 2026-08-14
+    post: 2026-08-14-ts-foundation-models.md
+
+  - id: 37
+    category: Paper
+    prefix: "Time Series"
+    title: "시계열 파운데이션 모델을 실제로 돌려보기 — Chronos 제로샷 예측"
+    slug: chronos-hands-on
+    tags: [Time Series, Chronos, Foundation Model, Python]
+    note: >-
+      #36 의 후속. 개념만 말고 직접 돌려본다. 설치 → 내 데이터 넣기 → 제로샷 예측 →
+      전용 모델과 비교. ⚠️ 스킬 규칙 8 — 반드시 실제로 실행해보고 쓴다.
+      실행 못 하면 발행하지 않는다. amazon-science/chronos-forecasting 공식 문서 기준.
+    status: todo
+
+  - id: 38
+    category: Dev
+    prefix: "Python"
+    title: "Pandas 시계열 리샘플링 — resample 과 asfreq 의 차이"
+    slug: pandas-resample
+    tags: [Python, Pandas, Time Series, resample]
+    note: >-
+      2024-07 '시계열 데이터 전처리' 편의 후속. 다운샘플링·업샘플링, 결측 채우기 방식,
+      closed/label 인자 때문에 값이 밀리는 흔한 함정. 실행 결과를 붙인다.
+    status: todo
+
+  - id: 39
+    category: Dev
+    prefix: "SQL"
+    title: "윈도우 함수로 시계열 집계하기 — LAG, LEAD, 이동평균"
+    slug: sql-window-timeseries
+    tags: [SQL, window function, Time Series]
+    note: >-
+      2024-08 DDL/DML 편 이후 SQL 후속. 시계열 데이터를 SQL 단에서 다루는 실전 패턴.
+      전기 대비 증감, 이동평균, 누적합. 실제 쿼리를 돌려보고 결과를 싣는다.
+    status: todo
