@@ -426,7 +426,28 @@ topics:
     note: >-
       2024-07 '시계열 데이터 전처리' 편의 후속. 다운샘플링·업샘플링, 결측 채우기 방식,
       closed/label 인자 때문에 값이 밀리는 흔한 함정. 실행 결과를 붙인다.
+      pandas 3.0.2 에서 동작은 그대로임을 #40 작업 중 확인했다 —
+      resample('2h').sum() → [1,5,9,13], asfreq('2h') → [0,2,4,6] (0~7 시간별 시리즈 기준).
+      #40 을 먼저 냈으므로 여기서는 마이그레이션 얘기를 반복하지 말고 링크만 건다.
     status: todo
+
+  - id: 40
+    category: Dev
+    prefix: "Python"
+    title: "pandas 3.0 — 오류 없이 결과만 달라지는 것들"
+    slug: pandas-3-migration
+    tags: [Python, Pandas, Copy-on-Write, dtype, migration]
+    note: >-
+      pandas 3.0.0(2026-01-21) 마이그레이션. 예외가 나는 변경이 아니라 조용히 결과만
+      바뀌는 것들만 골라 썼다 — 연쇄 할당, CoW 로 끊긴 뷰, str dtype, datetime 해상도.
+      전부 pandas 3.0.2 / numpy 2.4.4 / Python 3.13.7 에서 직접 실행해 결과를 붙였다.
+      확인 과정에서 예상이 두 번 틀렸고 그게 글의 핵심이 됐다 —
+      (1) ChainedAssignmentError 는 이름과 달리 Warning 서브클래스라 스크립트가 계속 돈다.
+      (2) 명령줄 -W error::... 로는 안 잡히고 warnings.simplefilter 를 스크립트 안에 걸어야 한다.
+      가장 위험한 건 datetime → int64 의 1000배 오차라고 결론.
+    status: done
+    published: 2026-08-19
+    post: 2026-08-19-pandas-3-migration.md
 
   - id: 39
     category: Dev

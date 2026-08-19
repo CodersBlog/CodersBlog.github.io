@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#808080">떼어둔 열이 원본을 따라가는가</text>
+  <text x="24" y="50" font-size="12" fill="#808080">v = df["a"] 로 열을 하나 잡아둔 뒤, df 를 고쳤을 때 v 가 어떻게 되는가.</text>
+
+  <line x1="400" y1="70" x2="400" y2="284" stroke="#808080" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.4"/>
+
+  <!-- ══ 왼쪽: 2.x ══ -->
+  <text x="24" y="92" font-size="13.5" font-weight="700" fill="#5B8DEF">pandas 2.x — 뷰일 수도 있었다</text>
+
+  <rect x="40" y="110" width="120" height="34" rx="5" fill="#5B8DEF" fill-opacity="0.55"/>
+  <text x="100" y="132" font-size="12" font-weight="600" text-anchor="middle" fill="#ffffff">df["a"]</text>
+
+  <rect x="236" y="110" width="120" height="34" rx="5" fill="#5B8DEF" fill-opacity="0.55"/>
+  <text x="296" y="132" font-size="12" font-weight="600" text-anchor="middle" fill="#ffffff">v</text>
+
+  <path d="M160 127 L232 127" stroke="#5B8DEF" stroke-width="2" fill="none"/>
+  <text x="196" y="118" font-size="10.5" text-anchor="middle" fill="#808080">같은 메모리</text>
+
+  <text x="40" y="176" font-size="12" fill="#808080">df.loc[0, "a"] = 99 실행</text>
+
+  <g font-size="12" text-anchor="middle">
+    <rect x="40" y="192" width="120" height="30" rx="5" fill="#5B8DEF" fill-opacity="0.2" stroke="#5B8DEF" stroke-opacity="0.5"/>
+    <text x="100" y="212" fill="#808080">[99, 2, 3]</text>
+    <rect x="236" y="192" width="120" height="30" rx="5" fill="#5B8DEF" fill-opacity="0.2" stroke="#5B8DEF" stroke-opacity="0.5"/>
+    <text x="296" y="212" fill="#808080">[99, 2, 3]</text>
+  </g>
+
+  <rect x="24" y="240" width="352" height="44" rx="6" fill="#5B8DEF" fill-opacity="0.12" stroke="#5B8DEF" stroke-opacity="0.45"/>
+  <text x="40" y="268" font-size="12.5" fill="#808080">v 도 같이 바뀐다 — 다만 뷰인지 복사본인지 불확실했다</text>
+
+  <!-- ══ 오른쪽: 3.0 ══ -->
+  <text x="424" y="92" font-size="13.5" font-weight="700" fill="#3FB6A8">pandas 3.0 — 언제나 복사본처럼</text>
+
+  <rect x="440" y="110" width="120" height="34" rx="5" fill="#3FB6A8" fill-opacity="0.7"/>
+  <text x="500" y="132" font-size="12" font-weight="600" text-anchor="middle" fill="#ffffff">df["a"]</text>
+
+  <rect x="636" y="110" width="120" height="34" rx="5" fill="#A66BBE" fill-opacity="0.7"/>
+  <text x="696" y="132" font-size="12" font-weight="600" text-anchor="middle" fill="#ffffff">v</text>
+
+  <path d="M560 127 L632 127" stroke="#808080" stroke-width="2" stroke-dasharray="5 4" stroke-opacity="0.6" fill="none"/>
+  <text x="596" y="118" font-size="10.5" text-anchor="middle" fill="#808080">끊겨 있다</text>
+
+  <text x="440" y="176" font-size="12" fill="#808080">df.loc[0, "a"] = 99 실행</text>
+
+  <g font-size="12" text-anchor="middle">
+    <rect x="440" y="192" width="120" height="30" rx="5" fill="#3FB6A8" fill-opacity="0.2" stroke="#3FB6A8" stroke-opacity="0.5"/>
+    <text x="500" y="212" fill="#808080">[99, 2, 3]</text>
+    <rect x="636" y="192" width="120" height="30" rx="5" fill="#A66BBE" fill-opacity="0.2" stroke="#A66BBE" stroke-opacity="0.5"/>
+    <text x="696" y="212" fill="#808080">[1, 2, 3]</text>
+  </g>
+
+  <rect x="424" y="240" width="352" height="44" rx="6" fill="#E05C5C" fill-opacity="0.12" stroke="#E05C5C" stroke-opacity="0.45"/>
+  <text x="440" y="268" font-size="12.5" font-weight="700" fill="#808080">v 는 그대로 — 경고도 오류도 없다</text>
+
+  <text x="24" y="310" font-size="11" fill="#808080">※ pandas 3.0.2 에서 실제로 실행한 결과입니다. 규칙이 일관돼진 대신, 옛 코드의 가정이 조용히 깨집니다.</text>
+</svg>
