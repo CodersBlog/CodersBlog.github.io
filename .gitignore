@@ -22,6 +22,32 @@ package-lock.json
 !.vscode/settings.json
 !.vscode/extensions.json
 
+# Python 가상환경 / 캐시
+# 글 쓰면서 모델을 직접 돌려볼 때 레포 안에 venv 를 만들어도 커밋되지 않도록 둔다.
+.venv
+venv
+env
+*-env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints
+
+# 모델 가중치 · 변환 산출물
+# 용량이 크고 레포에 들어갈 이유가 없다. 글에는 수치와 코드만 남긴다.
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.tflite
+*.engine
+*.npy
+*.npz
+
+# 작업용 산출물 (증빙 이미지, 실험 스크래치 등)
+scratch/
+ondevice/
+*-증빙/
+
 # Misc
 #_sass/dist
 # assets/js/dist
