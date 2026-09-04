@@ -475,4 +475,19 @@ topics:
     note: >-
       2024-08 DDL/DML 편 이후 SQL 후속. 시계열 데이터를 SQL 단에서 다루는 실전 패턴.
       전기 대비 증감, 이동평균, 누적합. 실제 쿼리를 돌려보고 결과를 싣는다.
-    status: todo
+      ── 발행 후 기록 ──
+      ⚠️ 문법 소개로 끝내려던 계획을 바꿨다. 3엔진 정확성 검증을 돌리다 pandas 와 답이
+      안 맞는 걸 발견했고 그게 글의 뼈대가 됐다. NAB 실데이터 22,695행 기준
+      ① 정렬 안 함 오차 1,125 → ② 시간순 정렬(중복 12건) 94.6 → ③ ORDER BY ts,rid 2.3e-10.
+      원인 두 겹: SQL 은 ORDER BY 로 순서를 정하는데 pandas 는 현재 행 순서를 쓴다 /
+      동일 타임스탬프 12건(0.05%)이 있어 ORDER BY ts 만으로는 정렬이 비결정적.
+      pandas-resample·pandas-3-migration 과 같은 "조용히 틀리는 것" 계열로 묶었다.
+      ⚠️ 첫 벤치마크는 불공정했다 — pandas 는 계산만, DB 는 적재+질의+반환을 쟀다.
+      적재/질의를 분리해 다시 쟀고, sqlite 지연이 DataFrame 변환이 아니라 질의 자체임도
+      COUNT 로 감싸 분해 확인했다 (100만행: 질의만 2.02s / read_sql 까지 3.38s).
+      스케일링(합성, 설비 50대): 500만행에서 sqlite 20.23s vs duckdb 0.93s vs pandas 0.215s.
+      SQLite 를 깎아내리지 않도록 "임베디드 트랜잭션 엔진이지 분석용이 아니다" 를 콜아웃에 명시.
+      차트는 dataviz 절차대로 검증된 팔레트 재사용, 로그-로그 + 직접 레이블.
+    status: done
+    published: 2026-09-04
+    post: 2026-09-04-sql-window-functions.md
