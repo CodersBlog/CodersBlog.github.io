@@ -491,3 +491,30 @@ topics:
     status: done
     published: 2026-09-04
     post: 2026-09-04-sql-window-functions.md
+
+  - id: 41
+    category: Review
+    prefix: "Time Series"
+    title: "이상탐지기는 실제 고장을 잡아내나 — 라벨된 데이터로 재봤다"
+    slug: anomaly-detection-eval
+    tags: [Time Series, anomaly detection, Chronos, IsolationForest, NAB]
+    note: >-
+      #37 chronos-hands-on 의 후속. 예측을 잘하면 이상탐지도 잘하는가를 라벨로 검증했다.
+      데이터: NAB realKnownCause 7종 69,561행 / 라벨 구간 19개 (고장 원인이 확인된 것만).
+      탐지기 4종: 이동평균 3σ / 롤링중앙값 MAD / IsolationForest / Chronos-2 예측오차.
+      ★ 이 글의 핵심은 알고리즘이 아니라 "비교를 공정하게 만드는 장치" 였다 —
+        (1) 알람 예산을 맞춘다(점수 상위 K개만 알람) (2) 붙은 알람은 한 사건으로 센다
+        (3) 전부 인과적으로 만든다. 임계값을 각자 정하게 두면 많이 울리는 쪽이 이긴다.
+      결과: 예산 0.5% 에서 Chronos 15/19 · IF 13/19 · 3σ 12/19 · MAD 7/19.
+        예산을 쓸어보니 교차가 생겼다 — 오탐 30~150 구간은 Chronos 우세,
+        200 이상에서는 IF 가 역전(18개)하고 Chronos 는 16 에서 정체. 19개를 다 잡은 건 없다.
+      뜻밖: "이상치에 강한" MAD 가 전 구간 꼴찌. 찾아야 할 대상을 눌러버린다.
+        3σ 는 예산 0.005~0.015 에서 12개 정체 — 알람을 더 울려도 소용없는 구간이 있다.
+      공정성 점검: Chronos 는 앞 512점을 못 채점하는데, 라벨 19개 중 거기 걸리는 건 0개임을 확인.
+      한계 넷: 표본 19개(1~2개 차이는 무의미) / 데이터셋별 튜닝 안 함 / NAB 라벨이 관대함 /
+        알람 예산을 맞추려면 점수 분포를 미리 알아야 해 실시간에는 이 전제가 없다.
+      비용: Chronos 로 69,561행 채점에 CPU 46.3초, 나머지는 1초 미만.
+      차트 2장 — 맞바꿈 곡선(로그 x) + 실제 계열 위 알람 위치. dataviz 4색 팔레트 검증 통과.
+    status: done
+    published: 2026-09-08
+    post: 2026-09-08-anomaly-detection-eval.md
