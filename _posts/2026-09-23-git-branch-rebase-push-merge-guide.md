@@ -40,7 +40,7 @@ A ── B  main, feature/search
 
 기능 브랜치에서 두 번 커밋하면 두 이름은 갈라집니다.
 
-![공통 커밋에서 main과 기능 브랜치가 갈라지는 모습](/assets/img/post/git-workflow/branches.svg){: .align-center}
+![공통 커밋에서 main과 기능 브랜치가 갈라지는 모습](/assets/img/post/git-workflow/branches.svg?v=aa90c9d){: .align-center}
 *공통 이력은 함께 사용하고, 분기한 뒤에는 각 브랜치에서 별도로 커밋합니다.*
 
 이 관점이 중요합니다. `push`는 내 커밋을 원격 저장소에 보내 원격 브랜치가 가리키는 위치를 옮기는 일이고, `merge`와 `rebase`는 서로 갈라진 커밋 흐름을 정리하는 방법입니다.
@@ -106,7 +106,7 @@ git push -u origin feature/search-filter
 
 `main`을 기능 브랜치에 merge하면 두 갈래를 부모로 가진 새 커밋이 생깁니다.
 
-![merge 전후의 커밋 그래프](/assets/img/post/git-workflow/merge.svg){: .align-center}
+![merge 전후의 커밋 그래프](/assets/img/post/git-workflow/merge.svg?v=aa90c9d){: .align-center}
 *기능 브랜치에 main을 합치면 두 이력을 연결하는 merge 커밋 M이 생깁니다.*
 
 merge는 실제로 어떤 두 흐름을 합쳤는지 기록으로 남깁니다. 팀원이 이미 공유한 커밋을 재작성하지 않아도 된다는 장점이 있습니다. 반면 자주 합치면 히스토리에 merge commit이 늘어날 수 있습니다.
@@ -136,7 +136,7 @@ git merge --abort
 
 같은 시작점에서 기능 브랜치가 `C`, `D`를 만들고 `main`이 `E`로 이동했다고 합시다. rebase는 내 변경을 `E` 위에 다시 적용합니다.
 
-![rebase 전후의 커밋 그래프](/assets/img/post/git-workflow/rebase.svg){: .align-center}
+![rebase 전후의 커밋 그래프](/assets/img/post/git-workflow/rebase.svg?v=aa90c9d){: .align-center}
 *C와 D를 E 위에 다시 적용하면 내용이 이어져도 새 커밋 C′와 D′가 만들어집니다.*
 
 `C'`, `D'`는 원래 커밋과 내용이 비슷해도 새 커밋입니다. 부모 커밋이 달라졌기 때문에 커밋 ID도 바뀝니다. 결과는 한 줄로 읽기 쉬워지지만, 기존 커밋을 새 커밋으로 교체하는 기록 재작성(history rewrite)입니다.
@@ -179,7 +179,7 @@ git rebase --abort
 
 로컬과 원격 브랜치가 같은 커밋 `B`에서 시작했지만, 동료는 `E`를 push하고 나는 `C`, `D`를 만들었다고 합시다.
 
-![로컬과 원격의 이력이 갈라져 push가 거절되는 상황](/assets/img/post/git-workflow/push-rejected.svg){: .align-center}
+![로컬과 원격의 이력이 갈라져 push가 거절되는 상황](/assets/img/post/git-workflow/push-rejected.svg?v=aa90c9d){: .align-center}
 *먼저 원격 커밋을 가져와 내 변경과 통합해야 원격 작업을 보존할 수 있습니다.*
 
 내 `D`를 원격의 `E` 위에 그대로 덮으면 동료의 `E`가 원격 브랜치에서 사라질 수 있습니다. 그래서 Git은 기본적으로 fast-forward가 아닌 push를 거부합니다. 이는 오류라기보다 원격 작업을 보호하는 안전장치입니다.
