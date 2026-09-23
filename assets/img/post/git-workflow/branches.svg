@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" role="img" aria-labelledby="title desc">
+  <title id="title">main에서 기능 브랜치가 갈라지는 커밋 그래프</title>
+  <desc id="desc">공통 커밋 A와 B 뒤에서 main은 C로, feature/search는 C와 D로 나뉩니다.</desc>
+  <defs>
+    <marker id="arrow-main" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#17877c"/></marker>
+    <marker id="arrow-feature" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#5367c8"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#16324f" flood-opacity=".10"/></filter>
+  </defs>
+  <rect x="12" y="12" width="936" height="306" rx="22" fill="#f7f9fc" stroke="#e3e9f2"/>
+  <text x="48" y="58" font-family="Arial,'Malgun Gothic',sans-serif" font-size="19" font-weight="700" fill="#21324a">하나의 기준점에서 작업 브랜치가 갈라집니다</text>
+  <text x="48" y="84" font-family="Arial,'Malgun Gothic',sans-serif" font-size="13" fill="#728096">브랜치는 커밋을 가리키는 이름표입니다. 각 브랜치는 이후 서로 다른 커밋을 가리킵니다.</text>
+  <path d="M174 205H352" fill="none" stroke="#93a1b3" stroke-width="5" stroke-linecap="round"/>
+  <path d="M352 205C410 205 420 132 492 132H710" fill="none" stroke="#5367c8" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow-feature)"/>
+  <path d="M352 205H710" fill="none" stroke="#17877c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow-main)"/>
+  <g filter="url(#shadow)">
+    <circle cx="174" cy="205" r="27" fill="#fff" stroke="#8796a9" stroke-width="4"/>
+    <circle cx="352" cy="205" r="27" fill="#fff" stroke="#8796a9" stroke-width="4"/>
+    <circle cx="535" cy="132" r="27" fill="#fff" stroke="#5367c8" stroke-width="4"/>
+    <circle cx="710" cy="132" r="27" fill="#fff" stroke="#5367c8" stroke-width="4"/>
+    <circle cx="710" cy="205" r="27" fill="#fff" stroke="#17877c" stroke-width="4"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#26364b">
+    <text x="174" y="210">A</text><text x="352" y="210">B</text><text x="535" y="137">C</text><text x="710" y="137">D</text><text x="710" y="210">C</text>
+  </g>
+  <rect x="757" y="107" width="150" height="40" rx="20" fill="#e9ecff"/>
+  <text x="832" y="132" font-family="Arial,'Malgun Gothic',sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#4557b4">feature/search</text>
+  <rect x="757" y="185" width="110" height="40" rx="20" fill="#e3f5f1"/>
+  <text x="812" y="210" font-family="Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#14766e">main</text>
+  <text x="48" y="278" font-family="Arial,'Malgun Gothic',sans-serif" font-size="12" fill="#728096">공통 이력</text>
+  <line x1="48" y1="286" x2="118" y2="286" stroke="#a8b3c2" stroke-width="3" stroke-linecap="round"/>
+  <text x="344" y="278" font-family="Arial,'Malgun Gothic',sans-serif" font-size="12" fill="#728096">분기점</text>
+  <circle cx="352" cy="286" r="4" fill="#8796a9"/>
+</svg>
