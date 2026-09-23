@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500" role="img" aria-labelledby="title desc">
   <title id="title">rebase 전후의 커밋 그래프</title>
   <desc id="desc">기능 커밋 C와 D가 main의 최신 커밋 E 위에 새 커밋 C 프라임과 D 프라임으로 다시 적용됩니다.</desc>
   <defs>

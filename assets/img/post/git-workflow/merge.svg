@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500" role="img" aria-labelledby="title desc">
   <title id="title">merge 전후의 브랜치 그래프</title>
   <desc id="desc">왼쪽에서 main과 기능 브랜치가 갈라져 있고, 오른쪽에서 merge 커밋 M이 두 흐름을 합칩니다.</desc>
   <defs>

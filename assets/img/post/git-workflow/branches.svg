@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="330" viewBox="0 0 960 330" role="img" aria-labelledby="title desc">
   <title id="title">main에서 기능 브랜치가 갈라지는 커밋 그래프</title>
   <desc id="desc">공통 커밋 A와 B 뒤에서 main은 C로, feature/search는 C와 D로 나뉩니다.</desc>
   <defs>

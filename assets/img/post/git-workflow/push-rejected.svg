@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 370" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="370" viewBox="0 0 960 370" role="img" aria-labelledby="title desc">
   <title id="title">원격 브랜치와 로컬 브랜치가 갈라져 push가 거절되는 그래프</title>
   <desc id="desc">공통 커밋 B에서 로컬 C, D와 원격 E가 갈라져 있습니다. 로컬 push는 원격의 E를 건너뛰기 때문에 거절됩니다.</desc>
   <defs>
