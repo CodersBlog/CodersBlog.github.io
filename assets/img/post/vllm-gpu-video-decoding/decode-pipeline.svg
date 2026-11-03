@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">vLLM GPU video decoding pipeline</title>
+  <desc id="desc">CPU decoding path and NVDEC decoding path feeding multimodal preprocessing and a VLM server.</desc>
+  <defs>
+    <style>
+      .box{stroke:#64748b;stroke-width:2;rx:16}.txt{font-family:Arial,sans-serif;fill:#e2e8f0;font-size:22px;font-weight:700}.sub{font-family:Arial,sans-serif;fill:#cbd5e1;font-size:16px}.arrow{stroke:#94a3b8;stroke-width:3;marker-end:url(#a)}.label{font-family:Arial,sans-serif;fill:#94a3b8;font-size:15px}
+    </style>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/></marker>
+  </defs>
+  <rect width="1200" height="330" fill="#0f172a"/>
+  <text x="56" y="48" class="txt">CPU decode: CPU 사용량이 먼저 병목일 수 있다</text>
+  <rect x="56" y="75" width="190" height="84" class="box" fill="#334155"/><text x="102" y="113" class="txt">영상 파일</text><text x="88" y="140" class="sub">MP4 / stream</text>
+  <path d="M246 117 H322" class="arrow"/><rect x="324" y="75" width="220" height="84" class="box" fill="#7c2d12"/><text x="363" y="113" class="txt">CPU decoder</text><text x="369" y="140" class="sub">기본 경로</text>
+  <path d="M544 117 H620" class="arrow"/><rect x="622" y="75" width="236" height="84" class="box" fill="#1e3a5f"/><text x="647" y="113" class="txt">MM preprocess</text><text x="661" y="140" class="sub">sampled frames</text>
+  <path d="M858 117 H934" class="arrow"/><rect x="936" y="75" width="208" height="84" class="box" fill="#14532d"/><text x="1003" y="113" class="txt">VLM</text><text x="977" y="140" class="sub">prefill + decode</text>
+  <text x="56" y="215" class="txt">NVDEC decode: 디코딩을 GPU 비디오 엔진으로 이동</text>
+  <rect x="56" y="242" width="190" height="58" class="box" fill="#334155"/><text x="102" y="278" class="txt">영상 파일</text>
+  <path d="M246 271 H322" class="arrow"/><rect x="324" y="242" width="220" height="58" class="box" fill="#14532d"/><text x="373" y="278" class="txt">NVDEC</text>
+  <path d="M544 271 H620" class="arrow"/><rect x="622" y="242" width="236" height="58" class="box" fill="#1e3a5f"/><text x="648" y="278" class="txt">MM preprocess</text>
+  <path d="M858 271 H934" class="arrow"/><rect x="936" y="242" width="208" height="58" class="box" fill="#14532d"/><text x="1003" y="278" class="txt">VLM</text>
+  <text x="330" y="324" class="label">PyNvVideoCodec: MPS + 별도 VRAM 예산 / DeepStream: 스트리밍 소스 권장</text>
+</svg>
